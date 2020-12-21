@@ -24,6 +24,7 @@ data = {
   "credit_takeaway": 25
 }
 
+
 f = {"morethan": 1, "lessthan": 0, "atleast": 0, "atmost": 0}
 k = ["morethan", "lessthan", 'atleast', 'atmost']
 
@@ -70,7 +71,7 @@ class ActionProfitMargin(Action):
                 else:
                     dispatcher.utter_message(text="No")
             else:
-                pentities = [entities[0]['value'],entities[1]['value']]
+                pentities = [entities[0]['value'], entities[1]['value']]
                 g = 0  # mapped form f dictionary
                 for i in entities:
                     print("i val ", i['value'])
@@ -82,7 +83,6 @@ class ActionProfitMargin(Action):
                     dispatcher.utter_message(text="Yes")
                 else:
                     dispatcher.utter_message(text="No")
-
 
         return []
 
@@ -106,7 +106,7 @@ class ActionNumberOfCustomer(Action):
                 else:
                     dispatcher.utter_message(text="No")
             else:
-                pentities = [entities[0]['value'],entities[1]['value']]
+                pentities = [entities[0]['value'], entities[1]['value']]
                 g = 0  # mapped form f dictionary
                 for i in entities:
                     print("i val ", i['value'])
@@ -133,6 +133,8 @@ class ActionPaymentMode(Action):
         entities = tracker.latest_message['entities']
         if len(entities) == 0:
             dispatcher.utter_message(template="utter_mode_of_payment")
+        elif len(entities) == 2:
+            dispatcher.utter_message(text="Cash only")
         else:
             payment_mode = data['mode']
             if entities[0]['value'] == payment_mode:
@@ -162,7 +164,7 @@ class ActionCashDineTakeaway(Action):
             takeaway = data['cash_takeaway']
             a = 'dine in'
             b = 'takeaway'
-            if len(entities)==3:
+            if len(entities) == 3:
                 c = [entities[0]['value'], entities[1]['value'], entities[2]['value']]
             else:
                 c = [entities[0]['value'], entities[1]['value']]
@@ -200,7 +202,7 @@ class ActionCreditDineTakeaway(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         entities = tracker.latest_message['entities']
-        print("entities ",entities)
+        print("entities ", entities)
         if len(entities) == 1:
             if entities[0]['value'] == "dine in":
                 dispatcher.utter_message(template="utter_credit_card_dine")
@@ -211,11 +213,11 @@ class ActionCreditDineTakeaway(Action):
             takeaway = data['credit_takeaway']
             a = 'dine in'
             b = 'takeaway'
-            if len(entities)==3:
+            if len(entities) == 3:
                 c = [entities[0]['value'], entities[1]['value'], entities[2]['value']]
             else:
                 c = [entities[0]['value'], entities[1]['value']]
-            g = 0 #mapped form f dictionary
+            g = 0  # mapped form f dictionary
             for i in entities:
                 print("i val ", i['value'])
                 if i['value'] in k:

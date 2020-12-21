@@ -55,16 +55,16 @@ nlu:
     - is the cost of [10](profit_margin) % for profit?
     - can this profit margin be [10](profit_margin) %?
     - do you have the profits margin from [10](profit_margin) %?
-    - do you have the profits margin [lessthan](lessthan) [10](profit_margin) %?
-    - do you have the profits margin [more than](morethan) [10](profit_margin) %?
-    - do you have the profits margin [atmost](atmost) [10](profit_margin) %?
-    - do you have the profits margin [atleast](atleast) [10](profit_margin) %?
+    - do you have the profits margin [lessthan](extra) [10](profit_margin) %?
+    - do you have the profits margin [more than](extra) [10](profit_margin) %?
+    - do you have the profits margin [atmost](extra) [10](profit_margin) %?
+    - do you have the profits margin [atleast](extra) [10](profit_margin) %?
     - is the profit margin [5](profit_margin) %?
     - earnings margin [10](profit_margin) %?
-    - is the profit [morethan](morethan) [20](profit_margin)
-    - is the profit [less than](lessthan) [20](profit_margin)
-    - is the profit [atleast](atleast) [20](profit_margin)
-    - is the profit [atmost](atmost) [20](profit_margin)
+    - is the profit [morethan](extra) [20](profit_margin)
+    - is the profit [less than](extra) [20](profit_margin)
+    - is the profit [atleast](extra) [20](profit_margin)
+    - is the profit [atmost](extra) [20](profit_margin)
 - intent: number_of_customer
   examples: |
     - how many customers can be there in restaurant
@@ -82,21 +82,21 @@ nlu:
     - Does the restaurant get [120](number_customer) customers per day ?
     - Is the number of customers in the restaurant [100](number_customer) ?
     - Does the restaurant get atleast [100](number_customer) customers per day?
-    - [morethan](morethan) [90](number_customer) come to restaurant per day?
-    - [more than](morethan) [100](number_customer) come to restaurant per day?
-    - [less than](lessthan) [90](number_customer) come to restaurant per day?
-    - [atleast](atleast) [90](number_customer) come to restaurant per day?
-    - [atmost](atmost) [90](number_customer) come to restaurant per day?
+    - [morethan](extra) [90](number_customer) come to restaurant per day?
+    - [more than](extra) [100](number_customer) come to restaurant per day?
+    - [less than](extra) [90](number_customer) come to restaurant per day?
+    - [atleast](extra) [90](number_customer) come to restaurant per day?
+    - [atmost](extra) [90](number_customer) come to restaurant per day?
     - are you able to handle [100](number_customer) customers
     - are you able to handle [70](number_customer) customers
-    - can you handle [more than](morethan) [100](number_customer) customers
-    - can you handle [lessthan](lessthan) [129](number_customer) customers
-    - can you handle [atleast](atleast) [129](number_customer) customers
-    - can you handle [atmost](atmost) [129](number_customer) customers
+    - can you handle [more than](extra) [100](number_customer) customers
+    - can you handle [lessthan](extra) [129](number_customer) customers
+    - can you handle [atleast](extra) [129](number_customer) customers
+    - can you handle [atmost](extra) [129](number_customer) customers
     - do you get [94](number_customer) customer daily
-    - do you get [more than](morethan) [94](number_customer) customer daily
-    - do you get [atmost](atmost) [64](number_customer) customer daily
-    - do you get [atleast](atleast) [88](number_customer) customer daily
+    - do you get [more than](extra) [94](number_customer) customer daily
+    - do you get [atmost](extra) [64](number_customer) customer daily
+    - do you get [atleast](extra) [88](number_customer) customer daily
     - do you get [97](number_customer) customer on daily basis
 - intent: mode_of_payment
   examples: |
@@ -121,72 +121,78 @@ nlu:
     - do you accept [creditcard](mode)
     - accept [credit](mode)
     - accept [debit card](mode)
+    - do you accpet [cash](mode) or [credit card](mode)
+    - accept [cash](mode) or [credit](mode) ?
+    - accept [debit](mode) or [creditcard](mode) ?
+    - [credit](mode) or [cash](mode)
+    - [debit card](mode) or [credit card](mode)
+    - [debit](mode) or [credit](mode)
 - intent: cash_dine_takeaway
   examples: |
-    - How many [dine in](cash_dine_in) customers will use it ?
-    - number of [dine in](cash_dine_in) customers
-    - number of [takeaway](cash_takeaway) customer comes everyday ?
-    - How many customer comes to use for [dine in](cash_dine_in) ?
-    - How many customer comes to use for [takeaway](cash_takeaway) ?
-    - everyday [dinein](cash_dine_in) customer?
-    - everyday [takeaway](cash_takeaway) customer
-    - everyday [take away](cash_takeaway) customer
-    - percentage of people come for [dine in](cash_dine_in)
-    - percentage of people come for [takeaway](cash_takeaway)
-    - does the restaurant gets [90](number_customer) % [dine in](cash_dine_in) customer per day?
-    - does the restaurant gets [10](number_customer) % [takeaway](cash_takeaway) customer per day?
-    - does the restaurant gets [more than](morethan) [20](number_customer) precent [dinein](cash_dine_in) customer per day?
-    - does the restaurant gets [morethan](morethan) [30](number_customer) percent [takeaway](cash_takeaway) customer per day?
-    - does the restaurant gets [lessthan](lessthan) [30](number_customer) percent [takeaway](cash_takeaway) customer per day?
-    - does the restaurant gets [atleast](atleast) [10](number_customer) percent [takeaway](cash_takeaway) customer per day?
-    - does the restaurant gets [atmost](atmost) [50](number_customer) percent [takeaway](cash_takeaway) customer per day?
-    - how many [dine](cash_dine_in) in customers coming daily
-    - how many [dine in](cash_dine_in) customers you are handling on a daily basis
-    - how many [takeaway](cash_takeaway) customers coming daily
-    - how many [takeaway](cash_takeaway) customers you are handling on a daily basis
-    - how many [take away](cash_takeaway) customers coming daily
-    - how many [take away](cash_takeaway) customers you are handling on a daily basis
-    - are you able to handle [more than](morethan) [78](number_customer) % [dine in](cash_dine_in) customer
-    - are you able to handle [less than](lessthan) [78](number_customer) % [dine in](cash_dine_in) customer
-    - are you able to handle [atmost](atmost) [78](number_customer) % [dine in](cash_dine_in) customer
-    - are you able to handle [atleast](atleast) [78](number_customer) % [dine in](cash_dine_in) customer
-    - how many [dine in](cash_dine_in) customers you are handling
-    - how many [take away](cash_takeaway) customers you are handling
+    - How many [dine in](dine_in_takeaway) customers will use it ?
+    - number of [dine in](dine_in_takeaway) customers
+    - number of [takeaway](dine_in_takeaway) customer comes everyday ?
+    - How many customer comes to use for [dine in](dine_in_takeaway) ?
+    - How many customer comes to use for [takeaway](dine_in_takeaway) ?
+    - everyday [dinein](dine_in_takeaway) customer?
+    - everyday [takeaway](dine_in_takeaway) customer
+    - everyday [take away](dine_in_takeaway) customer
+    - percentage of people come for [dine in](dine_in_takeaway)
+    - percentage of people come for [takeaway](dine_in_takeaway)
+    - does the restaurant gets [90](number_customer) % [dine in](dine_in_takeaway) customer per day?
+    - does the restaurant gets [10](number_customer) % [takeaway](dine_in_takeaway) customer per day?
+    - does the restaurant gets [more than](extra) [20](number_customer) precent [dinein](dine_in_takeaway) customer per day?
+    - does the restaurant gets [morethan](extra) [30](number_customer) percent [takeaway](dine_in_takeaway) customer per day?
+    - does the restaurant gets [lessthan](extra) [30](number_customer) percent [takeaway](dine_in_takeaway) customer per day?
+    - does the restaurant gets [atleast](extra) [10](number_customer) percent [takeaway](dine_in_takeaway) customer per day?
+    - does the restaurant gets [atmost](extra) [50](number_customer) percent [takeaway](dine_in_takeaway) customer per day?
+    - how many [dine](dine_in_takeaway) in customers coming daily
+    - how many [dine in](dine_in_takeaway) customers you are handling on a daily basis
+    - how many [takeaway](dine_in_takeaway) customers coming daily
+    - how many [takeaway](dine_in_takeaway) customers you are handling on a daily basis
+    - how many [take away](dine_in_takeaway) customers coming daily
+    - how many [take away](dine_in_takeaway) customers you are handling on a daily basis
+    - are you able to handle [more than](extra) [78](number_customer) % [dine in](dine_in_takeaway) customer
+    - are you able to handle [less than](extra) [78](number_customer) % [dine in](dine_in_takeaway) customer
+    - are you able to handle [atmost](extra) [78](number_customer) % [dine in](dine_in_takeaway) customer
+    - are you able to handle [atleast](extra) [78](number_customer) % [dine in](dine_in_takeaway) customer
+    - how many [dine in](dine_in_takeaway) customers you are handling
+    - how many [take away](dine_in_takeaway) customers you are handling
 - intent: credit_card_dine_takeaway
   examples: |
-    - if credit card allowed, How many [dine in](credit_dine_in) customers will use it ?
-    - if credit card implemented number of [dine in](credit_dine_in) customers
-    - How many customer come to use for [dine in](credit_dine_in) if credit card allowed
-    - How many customer comes to use for [dine in](credit_dine_in) if credit card accepted
-    - if credit card allowed, How many [dine](credit_dine_in) customers will use it ?
-    - if credit card implemented number of [dine](credit_dine_in) customers
-    - if credit card allowed, How many [takeaway](credit_takeaway) customers will use it ?
-    - if credit card implemented number of [takeaway](credit_takeaway) customers
-    - How many customer come to use for [takeaway](credit_takeaway) if credit card allowed
-    - How many customer comes to use for [takeaway](credit_takeaway) if credit card accepted
-    - How many customer come to use for [dine](credit_dine_in) if credit card allowed
-    - How many customer comes to use for [dine](credit_dine_in) if credit card accept
-    - if credit card accept How many customer comer to use for [takeaway](credit_takeaway) ?
-    - everyday [dine in](credit_dine_in) customer for credit card user
-    - everyday [Takeaway](credit_takeaway) customer for user has credit card
-    - percentage of people come for [dinein](credit_dine_in) if they have credit card
-    - if user has credit then percentage of people come for [takeaway](credit_takeaway)
-    - does the restaurant gets [90](number_customer) % [dinein](credit_dine_in) customer per day if they use credit card ?
-    - does the restaurant gets [10](number_customer) % [Takeaway](credit_takeaway) customer per day if customer has credit card?
-    - does the restaurant gets [15](number_customer) percent [takeaway](credit_takeaway) customer per day if customer has credit card?
-    - does the restaurant gets [less than](lessthan) [27](number_customer) percent [takeaway](credit_takeaway) customer per day if customer has credit card?
-    - does the restaurant gets [more than](morethan) [20](number_customer) % [dine in](credit_dine_in) customer per day if credit card accept ?
-    - for credit card user does the restaurant gets [more than](morethan) [15](number_customer) % [takeaway](credit_takeaway) customer per day ?
-    - for credit card user does the restaurant gets [morethan](morethan) [25](number_customer) percent [takeaway](credit_takeaway) customer per day ?
-    - for credit card user does the restaurant gets [lessthan](lessthan) [45](number_customer) percent [takeaway](credit_takeaway) customer per day ?
-    - how many [dine](credit_dine_in) in customers coming daily in case credit card is allowed
-    - in case credit card is allowed how many [dine in](credit_dine_in) customers you are handling on a daily basis
-    - how many [takeaway](credit_takeaway) customers will use credit card if it is allowed
-    - in case credit card is allowed how many [takeaway](credit_takeaway) customers will come
-    - in case credit card allowed, are you able to handle [morethan](morethan) [54](number_customer) % [takeaway](credit_takeaway) customer
-    - in case credit card allowed, are you able to handle [less than](lessthan) [57](number_customer) % [dinein](credit_dine_in) customer
-    - in case credit card allowed, are you able to handle [atmost](atmost) [74](number_customer) % [dinein](credit_dine_in) customer
-    - in case credit card allowed, are you able to handle [atleast](atleast) [59](number_customer) % [dinein](credit_dine_in) customer
+    - if credit card allowed, How many [dine in](dine_in_takeaway) customers will use it ?
+    - if credit card implemented number of [dine in](dine_in_takeaway) customers
+    - How many customer come to use for [dine in](dine_in_takeaway) if credit card allowed
+    - How many customer comes to use for [dine in](dine_in_takeaway) if credit card accepted
+    - if credit card allowed, How many [dine](dine_in_takeaway) customers will use it ?
+    - if credit card implemented number of [dine](dine_in_takeaway) customers
+    - if credit card allowed, How many [takeaway](dine_in_takeaway) customers will use it ?
+    - if credit card implemented number of [takeaway](dine_in_takeaway) customers
+    - How many customer come to use for [takeaway](dine_in_takeaway) if credit card allowed
+    - How many customer comes to use for [takeaway](dine_in_takeaway) if credit card accepted
+    - How many customer come to use for [dine](dine_in_takeaway) if credit card allowed
+    - How many customer comes to use for [dine](dine_in_takeaway) if credit card accept
+    - if credit card accept How many customer comer to use for [takeaway](dine_in_takeaway) ?
+    - everyday [dine in](dine_in_takeaway) customer for credit card user
+    - everyday [Takeaway](dine_in_takeaway) customer for user has credit card
+    - percentage of people come for [dinein](dine_in_takeaway) if they have credit card
+    - if user has credit then percentage of people come for [takeaway](dine_in_takeaway)
+    - does the restaurant gets [90](number_customer) % [dinein](dine_in_takeaway) customer per day if they use credit card ?
+    - does the restaurant gets [10](number_customer) % [Takeaway](dine_in_takeaway) customer per day if customer has credit card?
+    - does the restaurant gets [15](number_customer) percent [takeaway](dine_in_takeaway) customer per day if customer has credit card?
+    - does the restaurant gets [less than](extra) [27](number_customer) percent [takeaway](dine_in_takeaway) customer per day if customer has credit card?
+    - does the restaurant gets [more than](extra) [20](number_customer) % [dine in](dine_in_takeaway) customer per day if credit card accept ?
+    - for credit card user does the restaurant gets [more than](extra) [15](number_customer) % [takeaway](dine_in_takeaway) customer per day ?
+    - for credit card user does the restaurant gets [morethan](extra) [25](number_customer) percent [takeaway](dine_in_takeaway) customer per day ?
+    - for credit card user does the restaurant gets [lessthan](extra) [45](number_customer) percent [takeaway](dine_in_takeaway) customer per day ?
+    - how many [dine](dine_in_takeaway) in customers coming daily in case credit card is allowed
+    - in case credit card is allowed how many [dine in](dine_in_takeaway) customers you are handling on a daily basis
+    - how many [takeaway](dine_in_takeaway) customers will use credit card if it is allowed
+    - in case credit card is allowed how many [takeaway](dine_in_takeaway) customers will come
+    - in case credit card allowed, are you able to handle [morethan](extra) [54](number_customer) % [takeaway](dine_in_takeaway) customer
+    - in case credit card allowed, are you able to handle [less than](extra) [57](number_customer) % [dinein](dine_in_takeaway) customer
+    - in case credit card allowed, are you able to handle [atmost](extra) [74](number_customer) % [dinein](dine_in_takeaway) customer
+    - in case credit card allowed, are you able to handle [atleast](extra) [59](number_customer) % [dinein](dine_in_takeaway) customer
 - synonym: cash
   examples: |
     - debit card

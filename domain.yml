@@ -12,16 +12,10 @@ intents:
 entities:
 - mode
 - profit_margin
-- credit_takeaway
-- cash_takeaway
+- dine_in_takeaway
 - number_customer
-- cash_dine_in
-- credit_dine_in
 - noodles_price
-- atmost
-- atleast
-- morethan
-- lessthan
+- extra
 responses:
   utter_noodles_price:
   - text: The price of each bowl of noodles is 60 pesos.

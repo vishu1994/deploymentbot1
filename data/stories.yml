@@ -19,10 +19,7 @@ stories:
   - intent: profit_margin
     entities:
     - profit_margin: 10
-    - morethan: more than
-    - lessthan: less than
-    - atleast: atleast
-    - atmost: atmost
+    - extra: more than
   - action: action_show_profit_margin
 
 - story: about number of customer
@@ -30,10 +27,7 @@ stories:
   - intent: number_of_customer
     entities:
     - number_customer: 100
-    - morethan: more than
-    - lessthan: less than
-    - atleast: atleast
-    - atmost: atmost
+    - extra: more than
   - action: action_show_number_of_customer
 
 - story: about mode of payment
@@ -41,30 +35,23 @@ stories:
   - intent: mode_of_payment
     entities:
     - mode: cash
+    - mode: credit
   - action: action_show_mode_of_payment
 
 - story: about cash dine_takeaway
   steps:
   - intent: cash_dine_takeaway
     entities:
-    - cash_dine_in: dine in
-    - cash_takeaway: takeaway
+    - dine_in_takeaway: dine in
     - number_customer: 15
-    - morethan: more than
-    - lessthan: less than
-    - atleast: atleast
-    - atmost: atmost
+    - extra: more than
   - action: action_show_cash_dine_takeaway
 
 - story: about credit dine_takeaway
   steps:
   - intent: credit_card_dine_takeaway
     entities:
-    - credit_dine_in: dine in
-    - credit_takeaway: takeaway
+    - dine_in_takeaway: dine in
     - number_customer: 15
-    - morethan: more than
-    - lessthan: less than
-    - atleast: atleast
-    - atmost: atmost
+    - extra: more than
   - action: action_show_credit_card_dine_takeaway
