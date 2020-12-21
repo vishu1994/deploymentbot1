@@ -2,12 +2,38 @@ version: "2.0"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: about noodles price
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: noodles_price
+  - action: action_show_noodles_price
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: askin about noodles
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: asking_about_noodles
+  - action: utter_asking_about_noodles
+
+- rule: about profit margin
+  steps:
+  - intent: profit_margin
+  - action: action_show_profit_margin
+
+- rule: about number of customer
+  steps:
+  - intent: number_of_customer
+  - action: action_show_number_of_customer
+
+- rule: about mode of payment
+  steps:
+  - intent: mode_of_payment
+  - action: action_show_mode_of_payment
+
+- rule: about cash dine_takeaway
+  steps:
+  - intent: cash_dine_takeaway
+  - action: action_show_cash_dine_takeaway
+
+- rule: about credit dine_takeaway
+  steps:
+  - intent: credit_card_dine_takeaway
+  - action: action_show_credit_card_dine_takeaway
+

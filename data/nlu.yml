@@ -1,92 +1,210 @@
 version: "2.0"
-
 nlu:
-- intent: greet
+- intent: noodles_price
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-- intent: goodbye
+    - what is the noodles price
+    - i wanted to know price for noodles
+    - please let me know about noodles price
+    - tell me about noodles price
+    - is the noodles price [60](noodles_price) pesos
+    - are you selling noodles at [60](noodles_price)
+    - are you serving noodles at [100](noodles_price) pesos
+    - are you serving noodles at [100](noodles_price)
+    - the noodles price are in [60](noodles_price) pesos
+    - do you want to buy [60](noodles_price) pesos for the noodles?
+    - Is the noodles price [60](noodles_price) pesos ?
+    - the noodles are in [60](noodles_price) pesos.
+    - does the noodles cost $ [60](noodles_price)?
+    - are the prices at [60](noodles_price) bucks a kilo?
+    - does the price of noodle range [60](noodles_price) pesos?
+    - does the price of noodles be [60](noodles_price) grand?
+- intent: asking_about_noodles
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
+    - are you providing noodles?
+    - do you make noodles?
+    - do you provide noodles?
+    - do you sell noodles?
+    - do you have noodles?
+    - you make noodles?
+    - can you prepare noodles?
+    - are you making noodles?
+    - do you take noodles order?
+    - have noodels?
+    - noodels?
+    - do you serve noodles?
+- intent: profit_margin
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
+    - what is the profit margin for the restaurant ?
+    - let me know the profit margin
+    - want to know the profit margin
+    - what's the profit margin?
+    - what's the profit of the restaurant?
+    - can you tell me what is the profit
+    - i am interested to know the profit margin of the restaurant
+    - is the profit margin [10](profit_margin) percent
+    - does the restaurant gets [20](profit_margin) percent
+    - i hope the profit margin of restaurant is [50](profit_margin) %
+    - is the profit margin [10](profit_margin) %
+    - does the restaurant gets [20](profit_margin) %
+    - is the profit margin [10](profit_margin) percent ?
+    - is the profit in [18](profit_margin) %?
+    - is the margin on profit at [19](profit_margin) %?
+    - is the profit margin at [10](profit_margin) %?
+    - would it take [10](profit_margin) % of a profit?
+    - is my profit margins over [25](profit_margin) percent?
+    - is the cost of [10](profit_margin) % for profit?
+    - can this profit margin be [10](profit_margin) %?
+    - do you have the profits margin from [10](profit_margin) %?
+    - do you have the profits margin [lessthan](lessthan) [10](profit_margin) %?
+    - do you have the profits margin [more than](morethan) [10](profit_margin) %?
+    - do you have the profits margin [atmost](atmost) [10](profit_margin) %?
+    - do you have the profits margin [atleast](atleast) [10](profit_margin) %?
+    - is the profit margin [5](profit_margin) %?
+    - earnings margin [10](profit_margin) %?
+    - is the profit [morethan](morethan) [20](profit_margin)
+    - is the profit [less than](lessthan) [20](profit_margin)
+    - is the profit [atleast](atleast) [20](profit_margin)
+    - is the profit [atmost](atmost) [20](profit_margin)
+- intent: number_of_customer
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
+    - how many customers can be there in restaurant
+    - what is the limit on number of customers
+    - Per day limit of number of customers
+    - How many customer come to restaurant per day?
+    - limits of customers per day in restaurant
+    - what is the maximum number of customers you can handle per day
+    - how many customers you handling daily
+    - how many customers you are handling everyday
+    - how many customers you are dealing with
+    - is the number of customers in the restaurant is [100](number_customer)
+    - is the maximum limit [100](number_customer)
+    - is the upper limit of customers [200](number_customer)
+    - Does the restaurant get [120](number_customer) customers per day ?
+    - Is the number of customers in the restaurant [100](number_customer) ?
+    - Does the restaurant get atleast [100](number_customer) customers per day?
+    - [morethan](morethan) [90](number_customer) come to restaurant per day?
+    - [more than](morethan) [100](number_customer) come to restaurant per day?
+    - [less than](lessthan) [90](number_customer) come to restaurant per day?
+    - [atleast](atleast) [90](number_customer) come to restaurant per day?
+    - [atmost](atmost) [90](number_customer) come to restaurant per day?
+    - are you able to handle [100](number_customer) customers
+    - are you able to handle [70](number_customer) customers
+    - can you handle [more than](morethan) [100](number_customer) customers
+    - can you handle [lessthan](lessthan) [129](number_customer) customers
+    - can you handle [atleast](atleast) [129](number_customer) customers
+    - can you handle [atmost](atmost) [129](number_customer) customers
+    - do you get [94](number_customer) customer daily
+    - do you get [more than](morethan) [94](number_customer) customer daily
+    - do you get [atmost](atmost) [64](number_customer) customer daily
+    - do you get [atleast](atleast) [88](number_customer) customer daily
+    - do you get [97](number_customer) customer on daily basis
+- intent: mode_of_payment
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
+    - what is the mode of payment?
+    - mode of payment?
+    - how to take payment?
+    - how to accept bill?
+    - is [cash](mode) allowed
+    - do you accept [cash](mode)
+    - do you accpet [creditcard](mode)
+    - is [credit card](mode) allowed
+    - is [credit](mode) allowed
+    - [Credit card](mode) accepted?
+    - is [debit](mode) allowed
+    - Is [debit card](mode) allowed
+    - [debit card](mode) accept?
+    - [credit](mode) accepted?
+    - do you accept [credit card](mode)
+    - do you accept [credit](mode)
+    - is [creditcard](mode) accepted
+    - is [credit](mode) accepted
+    - do you accept [creditcard](mode)
+    - accept [credit](mode)
+    - accept [debit card](mode)
+- intent: cash_dine_takeaway
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
+    - How many [dine in](cash_dine_in) customers will use it ?
+    - number of [dine in](cash_dine_in) customers
+    - number of [takeaway](cash_takeaway) customer comes everyday ?
+    - How many customer comes to use for [dine in](cash_dine_in) ?
+    - How many customer comes to use for [takeaway](cash_takeaway) ?
+    - everyday [dinein](cash_dine_in) customer?
+    - everyday [takeaway](cash_takeaway) customer
+    - everyday [take away](cash_takeaway) customer
+    - percentage of people come for [dine in](cash_dine_in)
+    - percentage of people come for [takeaway](cash_takeaway)
+    - does the restaurant gets [90](number_customer) % [dine in](cash_dine_in) customer per day?
+    - does the restaurant gets [10](number_customer) % [takeaway](cash_takeaway) customer per day?
+    - does the restaurant gets [more than](morethan) [20](number_customer) precent [dinein](cash_dine_in) customer per day?
+    - does the restaurant gets [morethan](morethan) [30](number_customer) percent [takeaway](cash_takeaway) customer per day?
+    - does the restaurant gets [lessthan](lessthan) [30](number_customer) percent [takeaway](cash_takeaway) customer per day?
+    - does the restaurant gets [atleast](atleast) [10](number_customer) percent [takeaway](cash_takeaway) customer per day?
+    - does the restaurant gets [atmost](atmost) [50](number_customer) percent [takeaway](cash_takeaway) customer per day?
+    - how many [dine](cash_dine_in) in customers coming daily
+    - how many [dine in](cash_dine_in) customers you are handling on a daily basis
+    - how many [takeaway](cash_takeaway) customers coming daily
+    - how many [takeaway](cash_takeaway) customers you are handling on a daily basis
+    - how many [take away](cash_takeaway) customers coming daily
+    - how many [take away](cash_takeaway) customers you are handling on a daily basis
+    - are you able to handle [more than](morethan) [78](number_customer) % [dine in](cash_dine_in) customer
+    - are you able to handle [less than](lessthan) [78](number_customer) % [dine in](cash_dine_in) customer
+    - are you able to handle [atmost](atmost) [78](number_customer) % [dine in](cash_dine_in) customer
+    - are you able to handle [atleast](atleast) [78](number_customer) % [dine in](cash_dine_in) customer
+    - how many [dine in](cash_dine_in) customers you are handling
+    - how many [take away](cash_takeaway) customers you are handling
+- intent: credit_card_dine_takeaway
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - if credit card allowed, How many [dine in](credit_dine_in) customers will use it ?
+    - if credit card implemented number of [dine in](credit_dine_in) customers
+    - How many customer come to use for [dine in](credit_dine_in) if credit card allowed
+    - How many customer comes to use for [dine in](credit_dine_in) if credit card accepted
+    - if credit card allowed, How many [dine](credit_dine_in) customers will use it ?
+    - if credit card implemented number of [dine](credit_dine_in) customers
+    - if credit card allowed, How many [takeaway](credit_takeaway) customers will use it ?
+    - if credit card implemented number of [takeaway](credit_takeaway) customers
+    - How many customer come to use for [takeaway](credit_takeaway) if credit card allowed
+    - How many customer comes to use for [takeaway](credit_takeaway) if credit card accepted
+    - How many customer come to use for [dine](credit_dine_in) if credit card allowed
+    - How many customer comes to use for [dine](credit_dine_in) if credit card accept
+    - if credit card accept How many customer comer to use for [takeaway](credit_takeaway) ?
+    - everyday [dine in](credit_dine_in) customer for credit card user
+    - everyday [Takeaway](credit_takeaway) customer for user has credit card
+    - percentage of people come for [dinein](credit_dine_in) if they have credit card
+    - if user has credit then percentage of people come for [takeaway](credit_takeaway)
+    - does the restaurant gets [90](number_customer) % [dinein](credit_dine_in) customer per day if they use credit card ?
+    - does the restaurant gets [10](number_customer) % [Takeaway](credit_takeaway) customer per day if customer has credit card?
+    - does the restaurant gets [15](number_customer) percent [takeaway](credit_takeaway) customer per day if customer has credit card?
+    - does the restaurant gets [less than](lessthan) [27](number_customer) percent [takeaway](credit_takeaway) customer per day if customer has credit card?
+    - does the restaurant gets [more than](morethan) [20](number_customer) % [dine in](credit_dine_in) customer per day if credit card accept ?
+    - for credit card user does the restaurant gets [more than](morethan) [15](number_customer) % [takeaway](credit_takeaway) customer per day ?
+    - for credit card user does the restaurant gets [morethan](morethan) [25](number_customer) percent [takeaway](credit_takeaway) customer per day ?
+    - for credit card user does the restaurant gets [lessthan](lessthan) [45](number_customer) percent [takeaway](credit_takeaway) customer per day ?
+    - how many [dine](credit_dine_in) in customers coming daily in case credit card is allowed
+    - in case credit card is allowed how many [dine in](credit_dine_in) customers you are handling on a daily basis
+    - how many [takeaway](credit_takeaway) customers will use credit card if it is allowed
+    - in case credit card is allowed how many [takeaway](credit_takeaway) customers will come
+    - in case credit card allowed, are you able to handle [morethan](morethan) [54](number_customer) % [takeaway](credit_takeaway) customer
+    - in case credit card allowed, are you able to handle [less than](lessthan) [57](number_customer) % [dinein](credit_dine_in) customer
+    - in case credit card allowed, are you able to handle [atmost](atmost) [74](number_customer) % [dinein](credit_dine_in) customer
+    - in case credit card allowed, are you able to handle [atleast](atleast) [59](number_customer) % [dinein](credit_dine_in) customer
+- synonym: cash
+  examples: |
+    - debit card
+    - debit
+- synonym: credit
+  examples: |
+    - creditcard
+    - credit card
+- synonym: dine in
+  examples: |
+    - dinein
+    - dine
+- synonym: morethan
+  examples: |
+    - more than
+- synonym: lessthan
+  examples: |
+    - less than
+- synonym: takeaway
+  examples: |
+    - take away

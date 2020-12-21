@@ -1,34 +1,52 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- noodles_price
+- asking_about_noodles
+- profit_margin
+- number_of_customer
+- mode_of_payment
+- cash_dine_takeaway
+- credit_card_dine_takeaway
+entities:
+- mode
+- profit_margin
+- credit_takeaway
+- cash_takeaway
+- number_customer
+- cash_dine_in
+- credit_dine_in
+- noodles_price
+- atmost
+- atleast
+- morethan
+- lessthan
+responses:
+  utter_noodles_price:
+  - text: The price of each bowl of noodles is 60 pesos.
+  utter_asking_about_noodles:
+  - text: Yes
+  utter_profit_margin:
+  - text: The profit margin for the restaurant is 10%.
+  utter_number_of_customer:
+  - text: The restaurant gets 100 customers in a day.
+  utter_mode_of_payment:
+  - text: payment mode is cash.
+  utter_cash_dine:
+  - text: 90% of the customers that the restaurant gets are dine in customers
+  utter_cash_takeaway:
+  - text: 10% of the customer that the restaurant gets are takeaway customer
+  utter_credit_card_dine:
+  - text: If the credit card option is given, 75% of dine in customers would like
+      to pay by credit card
+  utter_credit_card_takeaway:
+  - text: If the Credit card option is given, 25% of takeaway customer would like
+      to pay by credit card
+actions:
+- action_show_noodles_price
+- action_show_profit_margin
+- action_show_number_of_customer
+- action_show_mode_of_payment
+- action_show_cash_dine_takeaway
+- action_show_credit_card_dine_takeaway

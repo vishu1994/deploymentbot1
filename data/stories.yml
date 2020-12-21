@@ -2,29 +2,69 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: about noodles price
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: noodles_price
+    entities:
+    - noodles_price: 60
+  - action: action_show_noodles_price
 
-- story: sad path 1
+- story: askin about noodles
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: asking_about_noodles
+  - action: utter_asking_about_noodles
 
-- story: sad path 2
+- story: about profit margin
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: profit_margin
+    entities:
+    - profit_margin: 10
+    - morethan: more than
+    - lessthan: less than
+    - atleast: atleast
+    - atmost: atmost
+  - action: action_show_profit_margin
+
+- story: about number of customer
+  steps:
+  - intent: number_of_customer
+    entities:
+    - number_customer: 100
+    - morethan: more than
+    - lessthan: less than
+    - atleast: atleast
+    - atmost: atmost
+  - action: action_show_number_of_customer
+
+- story: about mode of payment
+  steps:
+  - intent: mode_of_payment
+    entities:
+    - mode: cash
+  - action: action_show_mode_of_payment
+
+- story: about cash dine_takeaway
+  steps:
+  - intent: cash_dine_takeaway
+    entities:
+    - cash_dine_in: dine in
+    - cash_takeaway: takeaway
+    - number_customer: 15
+    - morethan: more than
+    - lessthan: less than
+    - atleast: atleast
+    - atmost: atmost
+  - action: action_show_cash_dine_takeaway
+
+- story: about credit dine_takeaway
+  steps:
+  - intent: credit_card_dine_takeaway
+    entities:
+    - credit_dine_in: dine in
+    - credit_takeaway: takeaway
+    - number_customer: 15
+    - morethan: more than
+    - lessthan: less than
+    - atleast: atleast
+    - atmost: atmost
+  - action: action_show_credit_card_dine_takeaway
