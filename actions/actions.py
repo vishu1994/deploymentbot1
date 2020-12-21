@@ -12,8 +12,18 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-knowledge = open("knowledgebase.json", encoding='utf-8')
-data = json.load(knowledge)
+#knowledge = open("knowledgebase.json", encoding='utf-8')
+data = {
+  "noodle_price": 60,
+  "profit_margin": 10,
+  "number_customer" : 100,
+  "mode": "cash",
+  "cash_dine_in": 90,
+  "cash_takeaway": 10,
+  "credit_dine_in": 75,
+  "credit_takeaway": 25
+}
+
 f = {"morethan": 1, "lessthan": 0, "atleast": 0, "atmost": 0}
 k = ["morethan", "lessthan", 'atleast', 'atmost']
 
